@@ -1,0 +1,3 @@
+---
+# defaults file for ssl
+#priv_sign.path: '/etc/ssl/private/priv.key'

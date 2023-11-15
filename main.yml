@@ -1,0 +1,34 @@
+---
+ - name: install haproxy
+   hosts: haproxy
+   become: yes
+   roles:
+   - ntp
+   - nginx_balancing
+   - ssl
+   tags:
+   - haproxy
+   - reboot
+
+ - name: install Wordpress node1
+   hosts: node1
+   become: yes
+   roles:
+   - ntp
+   - Wordpress
+   - ssl
+   - reboot 
+   tags:  
+   - node1
+    
+ - name: install Wordpress node2
+   hosts: node2
+   become: yes
+   roles:
+   - ntp
+   - Wordpress
+   - reboot
+   tags:
+   - node2
+        
+  

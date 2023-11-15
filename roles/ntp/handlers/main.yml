@@ -1,0 +1,10 @@
+---
+# handlers file for ntp
+
+ - name: restart ntp
+   systemd:
+     name: nginx
+     state: restarted
+     enabled: yes
+
+
